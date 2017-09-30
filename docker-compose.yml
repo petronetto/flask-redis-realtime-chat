@@ -1,0 +1,23 @@
+version: '3'
+services:
+######################################
+# Applications Container
+######################################
+  app:
+    container_name: flask-chat
+    build:
+      context: .
+    volumes:
+      - .:/app
+    links:
+      - redis
+    ports:
+      - 5000:5000
+######################################
+# Redis Container
+######################################
+  redis:
+    container_name: redis
+    image: redis:4.0.1-alpine
+    ports:
+      - 6379:6379
