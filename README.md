@@ -17,4 +17,4 @@ Enjoy :)
 
 
 
-License: [MIT](License.txt)
+License: [MIT](LICENSE)
